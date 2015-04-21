@@ -1,0 +1,9 @@
+---
+title: "ShinyAppDescription"
+author: "Chris Tufts"
+date: "February 15, 2015"
+output: html_document
+---
+
+The K-nearest neighbor algorithm is used to classify instances of heart disease in the processed Cleveland data set available at <https://archive.ics.uci.edu/ml/datasets/Heart+Disease>.  20% of the data is used for testing and the remaining 80% is used for training. 
+

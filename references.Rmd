@@ -1,0 +1,15 @@
+---
+title: "references"
+author: "Chris Tufts"
+date: "February 15, 2015"
+output: html_document
+---
+
+The principal investigators responsible for the data collection are listed below:
+
+1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D. 
+2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D. 
+3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D. 
+4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation:Robert Detrano, M.D., Ph.D.
+
+The dataset used in this application is available at <https://archive.ics.uci.edu/ml/datasets/Heart+Disease>.
