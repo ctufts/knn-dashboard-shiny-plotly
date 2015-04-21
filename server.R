@@ -52,7 +52,7 @@ shinyServer(function(input, output) {
     
     output$distPlotA <- renderGraph({
       # plot distribution of selected feature
-      ggideal_point <- ggplot(ds, aes_string(x = input$featureDisplay_x, 
+      ggdistPlotA <- ggplot(ds, aes_string(x = input$featureDisplay_x, 
                                              fill = "factor(num)")) +
         geom_histogram(position = "dodge")  +
         labs(x = input$featureDisplay_x,
@@ -61,7 +61,7 @@ shinyServer(function(input, output) {
       
       # convert plot details to list
       # for plotly
-      fig <- gg2list(ggideal_point)
+      fig <- gg2list(ggdistPlotA)
       data <- list()
       for(i in 1:(length(fig)-1)){data[[i]]<-fig[[i]]}
       layout <- fig$kwargs$layout
@@ -83,7 +83,7 @@ shinyServer(function(input, output) {
 
     
     output$distPlotB <- renderGraph({
-      ggideal_point <- ggplot(ds, aes_string(input$featureDisplay_y, 
+      ggdistPlotB <- ggplot(ds, aes_string(input$featureDisplay_y, 
                                              fill = "factor(num)")) + 
         geom_histogram(position = "dodge") +
         labs(x = input$featureDisplay_y,
@@ -93,7 +93,7 @@ shinyServer(function(input, output) {
       
       # convert plot details to list
       # for plotly
-      fig <- gg2list(ggideal_point)
+      fig <- gg2list(ggdistPlotB)
       data <- list()
       for(i in 1:(length(fig)-1)){data[[i]]<-fig[[i]]}
       layout <- fig$kwargs$layout
@@ -116,7 +116,7 @@ shinyServer(function(input, output) {
 
   output$ScatterPlot <- renderGraph({
     # plot selected features against one another
-      ggideal_point <- ggplot(ds, aes_string(x = input$featureDisplay_x, 
+      ggscatter <- ggplot(ds, aes_string(x = input$featureDisplay_x, 
                           y = input$featureDisplay_y, 
                           color = "factor(num)")) + 
       geom_point(size = 8, position = position_jitter(w = 0.1, h = 0.1)) + 
@@ -127,7 +127,7 @@ shinyServer(function(input, output) {
   
       # convert plot details to list
       # for plotly
-      fig <- gg2list(ggideal_point)
+      fig <- gg2list(ggscatter)
       data <- list()
       for(i in 1:(length(fig)-1)){data[[i]]<-fig[[i]]}
       layout <- fig$kwargs$layout
